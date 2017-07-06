@@ -1,0 +1,40 @@
+{
+	"proxy": {
+		"listen": "0.0.0.0:9999",
+		"tls": false,
+		"certFile": "/path/to/proxy.crt",
+		"keyFile": "/path/to/proxy.key",
+		"clientTimeout": "20m",
+		"blockRefreshInterval": "1s",
+		"estimationWindow": "15m",
+		"luckWindow": "24h",
+		"largeLuckWindow": "72h",
+		"nonceOffset": 0,
+		"difficulty": 8
+	},
+
+	"coinbase": "t1K9CtKh4rZXEVfjhNovozLeLysyx9AwYrH",
+
+	"frontend": {
+		"listen": "0.0.0.0:8082",
+		"login": "admin",
+		"password": "",
+		"hideIP": false
+	},
+
+	"upstreamCheckInterval": "5s",
+	"upstream": [
+		{
+			"name": "Testnet",
+			"url": "http://127.0.0.1:8232",
+			"login": "1",
+			"password": "pass",
+			"timeout": "5s"
+		}
+	],
+
+	"newrelicEnabled": false,
+	"newrelicName": "MyZCashProxy",
+	"newrelicKey": "SECRET_KEY",
+	"newrelicVerbose": false
+}
